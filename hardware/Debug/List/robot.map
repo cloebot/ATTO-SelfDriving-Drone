@@ -1,0 +1,483 @@
+###############################################################################
+#
+# IAR ELF Linker V8.22.2.15995/W32 for ARM                10/May/2018  12:23:50
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Exe\robot.out
+#    Map file     =  
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\List\robot.map
+#    Command line =  
+#        -f C:\Users\thaol\AppData\Local\Temp\EW771F.tmp
+#        (C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj\distance_controller.o
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj\main.o
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj\motor_controller.o
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj\robot_brain.o
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj\uart_controller.o
+#        -o
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Exe\robot.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\List\robot.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        C:\ti\TivaWare_C_Series-2.1.3.156\driverlib\gcc\libdriver.a --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Warning[Li026]: the module "gpio.o(libdriver.a)" (and 4 other modules) do not
+          contain information to support Virtual Function Elimination
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__Heap_Handler   = Basic
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20007fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                 Kind        Address    Size  Object
+  -------                 ----        -------    ----  ------
+"A0":                                            0x40
+  .intvec                 ro code  0x00000000    0x40  vector_table_M.o [7]
+                                 - 0x00000040    0x40
+
+"P1":                                          0x2688
+  .text                   ro code  0x00000040   0xe22  xprintffull_nomb.o [3]
+  .text                   ro code  0x00000e62     0x2  vector_table_M.o [7]
+  .text                   ro code  0x00000e64    0x16  strchr.o [7]
+  .rodata                 const    0x00000e7a     0x1  unwind_debug.o [8]
+  .text                   ro code  0x00000e7c    0x40  xfail_s.o [3]
+  .text                   ro code  0x00000ebc    0x36  strlen.o [7]
+  .text                   ro code  0x00000ef4    0x58  memchr.o [7]
+  .text                   ro code  0x00000f4c   0x22e  I64DivMod.o [7]
+  .text                   ro code  0x0000117a    0x12  DblMul.o [6]
+  .text                   ro code  0x0000118c    0x76  ABImemcpy_unaligned.o [7]
+  .text                   ro code  0x00001204    0x70  frexp.o [6]
+  .text                   ro code  0x00001274    0x2e  DblCmpLe.o [6]
+  .text                   ro code  0x000012a4    0x2e  DblCmpGe.o [6]
+  .text                   ro code  0x000012d4   0x104  ldexp.o [6]
+  .text                   ro code  0x000013d8     0xe  DblToS32.o [6]
+  .text                   ro code  0x000013e6     0xe  S32ToDbl.o [6]
+  .text                   ro code  0x000013f4    0x12  DblSub.o [6]
+  .text                   ro code  0x00001406    0x12  DblDiv.o [6]
+  .text                   ro code  0x00001418     0xe  DblToU32.o [6]
+  .text                   ro code  0x00001426     0xe  U32ToDbl.o [6]
+  .text                   ro code  0x00001434     0x6  abort.o [3]
+  .text                   ro code  0x0000143c     0x2  I64DivZer.o [7]
+  .text                   ro code  0x00001440    0x14  exit.o [8]
+  .text                   ro code  0x00001454    0x7c  iarttio.o [8]
+  .text                   ro code  0x000014d0    0x3c  XShttio.o [3]
+  .text                   ro code  0x0000150c   0x3d8  pow32.o [6]
+  .text                   ro code  0x000018e4    0x48  frexpf.o [6]
+  .text                   ro code  0x0000192c   0x278  iar_Exp32.o [6]
+  .text                   ro code  0x00001ba4    0xc4  ldexpf.o [6]
+  .text                   ro code  0x00001c68   0x200  motor_controller.o [1]
+  .text.SysCtlPeripheralEnable
+                          ro code  0x00001e68    0x22  sysctl.o [5]
+  .text.SysCtlPWMClockSet
+                          ro code  0x00001e8c    0x14  sysctl.o [5]
+  .text.GPIOPinConfigure  ro code  0x00001ea0    0x4c  gpio.o [5]
+  .text.GPIOPinTypePWM    ro code  0x00001eec    0x1c  gpio.o [5]
+  .text.PWMGenConfigure   ro code  0x00001f08    0x30  pwm.o [5]
+  .text.PWMGenPeriodSet   ro code  0x00001f38    0x12  pwm.o [5]
+  .text.PWMPulseWidthSet  ro code  0x00001f4a    0x1e  pwm.o [5]
+  .text.PWMGenEnable      ro code  0x00001f68     0xa  pwm.o [5]
+  .text.PWMOutputState    ro code  0x00001f72    0x10  pwm.o [5]
+  .text.GPIODirModeSet    ro code  0x00001f82    0x2e  gpio.o [5]
+  .text.GPIOPadConfigSet  ro code  0x00001fb0   0x130  gpio.o [5]
+  .text                   ro code  0x000020e0   0x17c  distance_controller.o [1]
+  .text                   ro code  0x0000225c    0x28  printf.o [3]
+  .text                   ro code  0x00002284   0x140  heap0.o [3]
+  .text                   ro code  0x000023c4    0x2c  xgetmemchunk.o [3]
+  .rodata.g_pui32GPIOBaseAddrs
+                          const    0x000023f0    0x90  gpio.o [5]
+  .text                   ro code  0x00002480    0x38  main.o [1]
+  .text                   ro code  0x000024b8    0x24  newop_0.o [4]
+  .text                   ro code  0x000024dc    0x18  main.o [1]
+  .text                   ro code  0x000024f4    0x24  robot_brain.o [1]
+  .text                   ro code  0x00002518    0x14  main.o [1]
+  .text                   ro code  0x0000252c     0xa  delop_0.o [4]
+  .text                   ro code  0x00002536     0x4  nomemory.o [4]
+  .text                   ro code  0x0000253a     0x4  heaptramp0.o [3]
+  .text                   ro code  0x0000253e    0x38  packbits_init_single.o [7]
+  .text                   ro code  0x00002578    0x28  data_init.o [7]
+  .text                   ro code  0x000025a0    0x22  fpinit_M.o [6]
+  .text                   ro code  0x000025c2    0x22  iarwrite.o [8]
+  .iar.init_table         const    0x000025e4    0x10  - Linker created -
+  .text                   ro code  0x000025f4    0x20  putchar.o [3]
+  .text                   ro code  0x00002614    0x10  write.o [8]
+  .text                   ro code  0x00002624    0x1e  dwrite.o [8]
+  .text                   ro code  0x00002642    0x20  iarwstd.o [8]
+  .text                   ro code  0x00002664    0x1e  cmain.o [7]
+  .text                   ro code  0x00002682     0x4  low_level_init.o [3]
+  .text                   ro code  0x00002686     0x4  exit.o [3]
+  .text                   ro code  0x0000268c     0xa  cexit.o [7]
+  .text                   ro code  0x00002696    0x16  xprout.o [3]
+  .rodata                 const    0x000026ac     0xc  distance_controller.o [1]
+  .text                   ro code  0x000026b8     0xc  cstartup_M.o [7]
+  .rodata                 const    0x000026c4     0x0  packbits_init_single.o [7]
+  Initializer bytes       const    0x000026c4     0x4  <for P2-1>
+                                 - 0x000026c8  0x2688
+
+"P2", part 1 of 2:                               0x1d
+  P2-1                             0x20000000    0x1d  <Init block>
+    .data                 inited   0x20000000     0x8  XShttio.o [3]
+    .bss                  inited   0x20000008     0x4  new.o [4]
+    .bss                  inited   0x2000000c     0x4  xfail_s.o [3]
+    .bss                  inited   0x20000010     0x8  heap0.o [3]
+    .bss                  inited   0x20000018     0x4  xgetmemchunk.o [3]
+    .bss                  inited   0x2000001c     0x1  XShttio.o [3]
+                                 - 0x2000001d    0x1d
+
+"P2", part 2 of 2:                             0x3000
+  CSTACK                           0x20000020  0x1000  <Block>
+    CSTACK                uninit   0x20000020  0x1000  <Block tail>
+  HEAP                             0x20001020  0x2000  <Block>
+    HEAP                  uninit   0x20001020  0x2000  <Block tail>
+                                 - 0x20003020  0x3000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x4 (13% of destination):
+          0x000026c4   0x4
+    1 destination range, total size 0x1d:
+          0x20000000  0x1d
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj: [1]
+    distance_controller.o       380       12
+    main.o                      100
+    motor_controller.o          512
+    robot_brain.o                36
+    -------------------------------------------------
+    Total:                    1 028       12
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    XShttio.o                    60        2        9
+    abort.o                       6
+    exit.o                        4
+    heap0.o                     320        1        8
+    heaptramp0.o                  4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    32
+    xfail_s.o                    64        1        4
+    xgetmemchunk.o               44                 4
+    xprintffull_nomb.o        3 618
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                    4 218        4       25
+
+dlpp7M_tl_nc.a: [4]
+    delop_0.o                    10
+    new.o                                           4
+    newop_0.o                    36
+    nomemory.o                    4
+    -------------------------------------------------
+    Total:                       50                 4
+
+libdriver.a: [5]
+    gpio.o                      454      144
+    pwm.o                       122
+    sysctl.o                     54
+    -------------------------------------------------
+    Total:                      630      144
+
+m7M_tlv.a: [6]
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                     18
+    DblMul.o                     18
+    DblSub.o                     18
+    DblToS32.o                   14
+    DblToU32.o                   14
+    S32ToDbl.o                   14
+    U32ToDbl.o                   14
+    fpinit_M.o                   34
+    frexp.o                     112
+    frexpf.o                     72
+    iar_Exp32.o                 632
+    ldexp.o                     260
+    ldexpf.o                    196
+    pow32.o                     984
+    -------------------------------------------------
+    Total:                    2 492
+
+rt7M_tl.a: [7]
+    ABImemcpy_unaligned.o       118
+    I64DivMod.o                 558
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    memchr.o                     88
+    packbits_init_single.o       56
+    strchr.o                     22
+    strlen.o                     54
+    vector_table_M.o             66
+    -------------------------------------------------
+    Total:                    1 056
+
+shb_l.a: [8]
+    dwrite.o                     30
+    exit.o                       20
+    iarttio.o                   124
+    iarwrite.o                   34
+    iarwstd.o                    32
+    unwind_debug.o                         1
+    write.o                      16
+    -------------------------------------------------
+    Total:                      256        1
+
+    Gaps                         21
+    Linker created                        16   12 288
+-----------------------------------------------------
+    Grand Total:              9 751      177   12 317
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x000025e4          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000025f4          --   Gb  - Linker created -
+?main                   0x00002665         Code  Gb  cmain.o [7]
+Aldata                  0x20000010    0x8  Data  Lc  heap0.o [3]
+CSTACK$$Base            0x20000020          --   Gb  - Linker created -
+CSTACK$$Limit           0x20001020          --   Gb  - Linker created -
+DistanceController::CheckObstacleForward()
+                        0x000020e1   0x46  Code  Gb  distance_controller.o [1]
+DistanceController::Configure()
+                        0x00002173    0x8  Code  Gb  distance_controller.o [1]
+DistanceController::ConfigureADC()
+                        0x0000217b   0x96  Code  Gb  distance_controller.o [1]
+DistanceController::IsObstacle(int)
+                        0x00002129   0x4a  Code  Gb  distance_controller.o [1]
+GPIODirModeSet          0x00001f83   0x2e  Code  Gb  gpio.o [5]
+GPIOPadConfigSet        0x00001fb1  0x130  Code  Gb  gpio.o [5]
+GPIOPinConfigure        0x00001ea1   0x4c  Code  Gb  gpio.o [5]
+GPIOPinTypePWM          0x00001eed   0x1c  Code  Gb  gpio.o [5]
+HEAP$$Base              0x20001020          --   Gb  - Linker created -
+HEAP$$Limit             0x20003020          --   Gb  - Linker created -
+LoadInt                 0x000001f3   0x7a  Code  Lc  xprintffull_nomb.o [3]
+MotorController::Configure()
+                        0x00001ca5   0x18  Code  Gb  motor_controller.o [1]
+MotorController::ConfigureGPIO()
+                        0x00001d17   0x26  Code  Gb  motor_controller.o [1]
+MotorController::ConfigurePWM()
+                        0x00001cbd   0x5a  Code  Gb  motor_controller.o [1]
+MotorController::ConfigureTimer()
+                        0x00001d3d   0x32  Code  Gb  motor_controller.o [1]
+MotorController::EndTimer()
+                        0x00001dff   0x1a  Code  Gb  motor_controller.o [1]
+MotorController::Rotate()
+                        0x00001c69   0x3c  Code  Gb  motor_controller.o [1]
+MotorController::SpeedAdjustment(int)
+                        0x00001d6f   0x7e  Code  Gb  motor_controller.o [1]
+MotorController::StartTimer(int)
+                        0x00001ded   0x12  Code  Gb  motor_controller.o [1]
+PWMGenConfigure         0x00001f09   0x30  Code  Gb  pwm.o [5]
+PWMGenEnable            0x00001f69    0xa  Code  Gb  pwm.o [5]
+PWMGenPeriodSet         0x00001f39   0x12  Code  Gb  pwm.o [5]
+PWMOutputState          0x00001f73   0x10  Code  Gb  pwm.o [5]
+PWMPulseWidthSet        0x00001f4b   0x1e  Code  Gb  pwm.o [5]
+Region$$Table$$Base     0x000025e4          --   Gb  - Linker created -
+Region$$Table$$Limit    0x000025f4          --   Gb  - Linker created -
+RobotBrain::RobotBrain()
+                        0x000024dd   0x18  Code  Gb  main.o [1]
+RobotBrain::Work()      0x000024f5   0x24  Code  Gb  robot_brain.o [1]
+RobotBrain::~RobotBrain()
+                        0x00002519   0x14  Code  Gb  main.o [1]
+SysCtlPWMClockSet       0x00001e8d   0x14  Code  Gb  sysctl.o [5]
+SysCtlPeripheralEnable  0x00001e69   0x22  Code  Gb  sysctl.o [5]
+_GenldFullNoMb          0x00000b61  0x274  Code  Lc  xprintffull_nomb.o [3]
+_LdtobFullNoMb          0x00000735  0x3fe  Code  Lc  xprintffull_nomb.o [3]
+_LitobFullNoMb          0x000005dd  0x112  Code  Lc  xprintffull_nomb.o [3]
+_PrintfFullNoMb         0x00000041  0x1a4  Code  Gb  xprintffull_nomb.o [3]
+_Prout                  0x00002697   0x16  Code  Gb  xprout.o [3]
+_PutcharsFullNoMb       0x00000dd5   0x2e  Code  Lc  xprintffull_nomb.o [3]
+_PutfldFullNoMb         0x0000026d  0x264  Code  Lc  xprintffull_nomb.o [3]
+_PuttxtFullNoMb         0x000004d1  0x10c  Code  Lc  xprintffull_nomb.o [3]
+__aeabi_cdcmple         0x00001275         Code  Gb  DblCmpLe.o [6]
+__aeabi_cdrcmple        0x000012a5         Code  Gb  DblCmpGe.o [6]
+__aeabi_d2iz            0x000013d9    0xe  Code  Gb  DblToS32.o [6]
+__aeabi_d2uiz           0x00001419    0xe  Code  Gb  DblToU32.o [6]
+__aeabi_ddiv            0x00001407   0x12  Code  Gb  DblDiv.o [6]
+__aeabi_dmul            0x0000117b   0x12  Code  Gb  DblMul.o [6]
+__aeabi_dsub            0x000013f5   0x12  Code  Gb  DblSub.o [6]
+__aeabi_i2d             0x000013e7    0xe  Code  Gb  S32ToDbl.o [6]
+__aeabi_ldiv0           0x0000143d         Code  Gb  I64DivZer.o [7]
+__aeabi_ui2d            0x00001427    0xe  Code  Gb  U32ToDbl.o [6]
+__aeabi_uldivmod        0x00000f4d         Code  Gb  I64DivMod.o [7]
+__basic_free            0x00002331   0x16  Code  Gb  heap0.o [3]
+__basic_free_intern     0x00002347   0x7a  Code  Lc  heap0.o [3]
+__basic_malloc          0x00002285   0x18  Code  Gb  heap0.o [3]
+__basic_malloc_intern   0x0000229d   0x94  Code  Lc  heap0.o [3]
+__cmain                 0x00002665         Code  Gb  cmain.o [7]
+__data_GetMemChunk      0x000023c5   0x2c  Code  Gb  xgetmemchunk.o [3]
+__data_GetMemChunk::start
+                        0x20000018    0x4  Data  Lc  xgetmemchunk.o [3]
+__dwrite                0x00002625   0x1e  Code  Gb  dwrite.o [8]
+__exit                  0x00001441   0x14  Code  Gb  exit.o [8]
+__iar_Exp32             0x0000192d  0x278  Code  Gb  iar_Exp32.o [6]
+__iar_Fail_s            0x00000e7d   0x1c  Code  Gb  xfail_s.o [3]
+__iar_Memchr            0x00000ef5         Code  Gb  memchr.o [7]
+__iar_Pow32             0x0000150d  0x398  Code  Lc  pow32.o [6]
+__iar_Strchr            0x00000e65         Code  Gb  strchr.o [7]
+__iar_close_ttio        0x00001455   0x2c  Code  Gb  iarttio.o [8]
+__iar_data_init3        0x00002579   0x28  Code  Gb  data_init.o [7]
+__iar_debug_exceptions  0x00000e7a    0x1  Data  Gb  unwind_debug.o [8]
+__iar_frexp             0x00001211         Code  Gb  frexp.o [6]
+__iar_frexp32           0x000018e5         Code  Gb  frexpf.o [6]
+__iar_frexpf            0x000018f9         Code  Gb  frexpf.o [6]
+__iar_frexpl            0x00001211         Code  Gb  frexp.o [6]
+__iar_get_ttio          0x00001481   0x4c  Code  Gb  iarttio.o [8]
+__iar_init_vfp          0x000025a1         Code  Gb  fpinit_M.o [6]
+__iar_ldexp32           0x00001ba5         Code  Gb  ldexpf.o [6]
+__iar_ldexp64           0x000012e9         Code  Gb  ldexp.o [6]
+__iar_lookup_ttioh      0x000014ff    0x4  Code  Gb  XShttio.o [3]
+__iar_packbits_init_single3
+                        0x0000253f   0x38  Code  Gb  packbits_init_single.o [7]
+__iar_pow32             0x000018e1    0x4  Code  Gb  pow32.o [6]
+__iar_pow_medium32      0x000018e1    0x4  Code  Gb  pow32.o [6]
+__iar_pow_mediumf       0x000018e1    0x4  Code  Gb  pow32.o [6]
+__iar_program_start     0x000026b9         Code  Gb  cstartup_M.o [7]
+__iar_scalbln32         0x00001ba5         Code  Gb  ldexpf.o [6]
+__iar_scalbln64         0x000012e9         Code  Gb  ldexp.o [6]
+__iar_scalbn32          0x00001ba5         Code  Gb  ldexpf.o [6]
+__iar_scalbn64          0x000012e9         Code  Gb  ldexp.o [6]
+__iar_sh_stdout         0x00002643   0x20  Code  Gb  iarwstd.o [8]
+__iar_sh_write          0x000025c3   0x22  Code  Gb  iarwrite.o [8]
+__iar_softfp___iar_frexp64
+                        0x00001205         Code  Gb  frexp.o [6]
+__iar_softfp___iar_ldexp64
+                        0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp___iar_scalbln64
+                        0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp___iar_scalbn64
+                        0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_frexp      0x00001205         Code  Gb  frexp.o [6]
+__iar_softfp_frexpl     0x00001205         Code  Gb  frexp.o [6]
+__iar_softfp_ldexp      0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_ldexpl     0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_scalbln    0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_scalblnl   0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_scalbn     0x000012d5         Code  Gb  ldexp.o [6]
+__iar_softfp_scalbnl    0x000012d5         Code  Gb  ldexp.o [6]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__iar_ttio_guard_lock   0x000014d1   0x1e  Code  Gb  XShttio.o [3]
+__iar_ttio_guard_unlock
+                        0x000014ef   0x10  Code  Gb  XShttio.o [3]
+__iar_ttio_handles      0x20000000    0x8  Data  Lc  XShttio.o [3]
+__iar_unaligned_memcpy  0x0000118d         Code  Gb  ABImemcpy_unaligned.o [7]
+__iar_unaligned_memcpy4
+                        0x000011ad         Code  Gb  ABImemcpy_unaligned.o [7]
+__iar_unaligned_memcpy8
+                        0x000011ad         Code  Gb  ABImemcpy_unaligned.o [7]
+__low_level_init        0x00002683    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000         Data  Gb  vector_table_M.o [7]
+__write                 0x00002615   0x10  Code  Gb  write.o [8]
+_call_main              0x00002671         Code  Gb  cmain.o [7]
+_exit                   0x0000268d         Code  Gb  cexit.o [7]
+_main                   0x0000267f         Code  Gb  cmain.o [7]
+abort                   0x00001435    0x6  Code  Gb  abort.o [3]
+exit                    0x00002687    0x4  Code  Gb  exit.o [3]
+free                    0x0000253b    0x4  Code  Gb  heaptramp0.o [3]
+frexpf                  0x000018e5         Code  Gb  frexpf.o [6]
+g_pui32GPIOBaseAddrs    0x000023f0   0x90  Data  Lc  gpio.o [5]
+ldexp                   0x000012e9         Code  Gb  ldexp.o [6]
+ldexpf                  0x00001ba5         Code  Gb  ldexpf.o [6]
+ldexpl                  0x000012e9         Code  Gb  ldexp.o [6]
+main                    0x00002481   0x38  Code  Gb  main.o [1]
+memchr                  0x00000ef5         Code  Gb  memchr.o [7]
+operator delete (void *)
+                        0x0000252d    0xa  Code  Gb  delop_0.o [4]
+operator new (unsigned int)
+                        0x000024b9   0x24  Code  Gb  newop_0.o [4]
+powf                    0x000018e1    0x4  Code  Gb  pow32.o [6]
+printf                  0x0000225d   0x28  Code  Gb  printf.o [3]
+putchar                 0x000025f5   0x20  Code  Gb  putchar.o [3]
+scalbln                 0x000012e9         Code  Gb  ldexp.o [6]
+scalblnf                0x00001ba5         Code  Gb  ldexpf.o [6]
+scalblnl                0x000012e9         Code  Gb  ldexp.o [6]
+scalbn                  0x000012e9         Code  Gb  ldexp.o [6]
+scalbnf                 0x00001ba5         Code  Gb  ldexpf.o [6]
+scalbnl                 0x000012e9         Code  Gb  ldexp.o [6]
+scale                   0x000006ef   0x46  Code  Lc  xprintffull_nomb.o [3]
+sec_hand                0x2000000c    0x4  Data  Lc  xfail_s.o [3]
+std::_NomemoryNothrow()
+                        0x00002537    0x4  Code  Gb  nomemory.o [4]
+std::__iar_New_hand     0x20000008    0x4  Data  Gb  new.o [4]
+strchr                  0x00000e65         Code  Gb  strchr.o [7]
+strlen                  0x00000ebd         Code  Gb  strlen.o [7]
+ttio_guard              0x2000001c    0x1  Data  Lc  XShttio.o [3]
+
+
+[1] = C:\Users\thaol\Documents\LVAD_Motor\LVAD_motor\hardware\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = dlpp7M_tl_nc.a
+[5] = libdriver.a
+[6] = m7M_tlv.a
+[7] = rt7M_tl.a
+[8] = shb_l.a
+
+   9 751 bytes of readonly  code memory
+     177 bytes of readonly  data memory
+  12 317 bytes of readwrite data memory
+
+Errors: none
+Warnings: 1
