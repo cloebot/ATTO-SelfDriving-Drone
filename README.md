@@ -32,4 +32,4 @@ robots.
 
 <h1>Mobile Application</h1>
 
-For more information see Project report at
+For more information see Project report at https://github.com/cloebot/ATTO-SelfDriving-Drone/master/Atto_Project_Report.pdf
