@@ -1,6 +1,6 @@
 # ATTO Self Driving Drone
 
-<h1>Abstract</h1>
+<h2>Abstract</h2>
 For the final project, our group decided to design a semi-autonomous vehicle system we call
 ATTO. ATTO is a remote controlled car that can detect and avoid obstacles. We designed this
 device to be the starter to larger projects like spacial mapping cars. ATTO was built up using
@@ -8,7 +8,7 @@ smaller blocks of hardware and software, our major blocks were: range sensor, mo
 controller, bluetooth, power distribution, user control application, and autonomous drive system.
 These blocks were combined to build and test ATTO.
 
-<h1>Introduction</h1>
+<h2>Introduction</h2>
 The scope of the ATTO project is to create the chassis, and basic hardware and software
 components of a self driving remote controlled car. The self driving features of ATTO can detect
 and avoid obstacles in its path and report status information to the end user via onboard
@@ -24,12 +24,16 @@ communication to a base computer and have it drive over the entire area of that 
 behavior can be used in applications like roombas, spatial mapping, and spatial problem solving
 robots.
 
-<h1>Modules</h1>
+<h2>Modules</h2>
+![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/atto_readme_photo/master/Modules.PNG)
 
-<h1>Driving algorithm and main loop</h1>
+<h2>Driving algorithm and main loop</h2>
+![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/atto_readme_photo/master/Driving_algorithm.PNG)
 
-<h1>Software overview</h1>
+<h2>Software overview</h2>
+![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/atto_readme_photo/master/Software_overview.PNG)
 
-<h1>Mobile Application</h1>
+<h2>Mobile Application</h2>
+![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/atto_readme_photo/master/Mobile_Application.PNG)
 
 For more information see Project report at https://github.com/cloebot/ATTO-SelfDriving-Drone/master/Atto_Project_Report.pdf
