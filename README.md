@@ -34,6 +34,7 @@ robots.
 ![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/master/atto_readme_photo/Software_overview.PNG)
 
 <h2>Mobile Application</h2>
-![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/master/atto_readme_photo/Mobile_Application.PNG)
+![alt text](https://raw.githubusercontent.com/cloebot/ATTO-SelfDriving-Drone/master/atto_readme_photo/Mobile_Application.png)
+
 
 For more information see Project report at https://github.com/cloebot/ATTO-SelfDriving-Drone/master/Atto_Project_Report.pdf
